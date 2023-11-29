@@ -19,10 +19,18 @@ from django.urls import include, path
 from rest_framework import routers
 from login.views import UserViewSet
 from tarjetas.views import TarjetasViewSet
+from cuentas.views import CuentaViewSet
+from pagos.views import PagosViewSet
+from facturas.views import FacturaViewSet
+from prestamos.views import PrestamoViewSet
 
 router = routers.DefaultRouter()
-router.register(r"users", UserViewSet, basename="users")
-router.register(r"tarjetas", TarjetasViewSet, basename="tarjetas")
+router.register("users", UserViewSet, basename="users")
+router.register("tarjetas", TarjetasViewSet, basename="tarjetas")
+router.register("cuentas", CuentaViewSet, basename="cuentas")
+router.register("pagos", PagosViewSet, basename="pago_servicios")
+router.register("facturas", FacturaViewSet, basename="facturas")
+router.register("prestamos", PrestamoViewSet, basename="prestamos")
 
 urlpatterns = [
     path("admin/", admin.site.urls),

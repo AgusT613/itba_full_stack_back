@@ -1,10 +1,13 @@
 # Backend Homebanking Django
 
 - [Configuración del proyecto](#instalación-del-proyecto)
+- [Credenciales de base de datos](#credenciales)
 
 ## Instalación del proyecto
 
 - Clonar el repositorio, acceder a la carpeta, y crear un entorno virtual.
+- En este ejemplo se usó git bash.
+- Los comandos pueden variar dependiendo de la terminal usada. Para información más detallada visitar la [documentacion de .venv](https://docs.python.org/3/library/venv.html).
 
 ```bash
   git clone https://github.com/AgusT613/itba_full_stack_back.git
@@ -20,7 +23,13 @@
 
     - app/
       - app/ (main)
+      - cuentas/
+      - facturas/
       - login/
+      - pagos/
+      - prestamos/
+      - tarjetas/
+      - db.sqlite3
       - manage.py
     - .gitignore
     - README.md
@@ -38,18 +47,23 @@
   pip install -r requirements.txt
 ```
 
-- Acceder a la carpeta del proyecto `app` y crear los modelos de Django y aplicarlos a la base de datos (sqlite3)
-
-```bash
-  cd app
-
-  python manage.py makemigrations
-
-  python manage.py migrate
-```
-
 - Por último, arrancar el servidor de desarrollo:
 
 ```bash
   python manage.py runserver
+```
+
+## Credenciales
+
+Creadas para testear la aplicación
+
+```json
+{
+  username = agust613
+  password = agustin123
+},
+{
+  username = pablo
+  password = pablo123
+}
 ```

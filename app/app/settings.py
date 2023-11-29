@@ -41,6 +41,10 @@ INSTALLED_APPS = [
     "corsheaders",
     "login.apps.LoginConfig",
     "tarjetas.apps.TarjetasConfig",
+    "cuentas.apps.CuentasConfig",
+    "pagos.apps.PagosConfig",
+    "facturas.apps.FacturasConfig",
+    "prestamos.apps.PrestamosConfig",
 ]
 
 MIDDLEWARE = [
