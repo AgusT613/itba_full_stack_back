@@ -41,7 +41,7 @@
 - Acceder a la carpeta del proyecto `app` y crear los modelos de Django y aplicarlos a la base de datos (sqlite3)
 
 ```bash
-  cd homebanking
+  cd app
 
   python manage.py makemigrations
 
