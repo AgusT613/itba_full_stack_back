@@ -40,6 +40,11 @@ INSTALLED_APPS = [
     "rest_framework",
     "corsheaders",
     "login.apps.LoginConfig",
+    "tarjetas.apps.TarjetasConfig",
+    "cuentas.apps.CuentasConfig",
+    "pagos.apps.PagosConfig",
+    "facturas.apps.FacturasConfig",
+    "prestamos.apps.PrestamosConfig",
 ]
 
 MIDDLEWARE = [
@@ -130,4 +135,11 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-AUTH_USER_MODEL = "login.User"
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.BasicAuthentication",
+    ],
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.IsAuthenticated",
+    ],
+}
