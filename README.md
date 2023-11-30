@@ -1,9 +1,10 @@
-# Backend Homebanking Django
+# 🔷 Backend Homebanking Django 🔷
 
-- [Configuración del proyecto](#instalación-del-proyecto)
-- [Credenciales de base de datos](#credenciales)
+- [Frontend del proyecto hecho en NextJS](https://github.com/AgusT613/itba_full_stack_front) 🏹
+- [Configuración del proyecto](#🔸-instalación-del-proyecto) ⏬
+- [Credenciales de base de datos](#🔸-credenciales) ⏬
 
-## Instalación del proyecto
+## 🔸 Instalación del proyecto
 
 - Clonar el repositorio, acceder a la carpeta, y crear un entorno virtual.
 - En este ejemplo se usó git bash.
@@ -22,10 +23,10 @@
   - itba_full_stack_back/
 
     - app/
-      - app/ (main)
+      - 🟣 app/ (main)
       - cuentas/
       - facturas/
-      - login/
+      - 🟣 login/
       - pagos/
       - prestamos/
       - tarjetas/
@@ -53,9 +54,9 @@
   python manage.py runserver
 ```
 
-## Credenciales
+## 🔸 Credenciales
 
-Creadas para testear la aplicación
+- Creadas para testear la aplicación
 
 ```json
 {
