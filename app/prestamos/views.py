@@ -1,6 +1,7 @@
 from rest_framework import viewsets
-from .models import Prestamo
-from .serializers import PrestamosSerializer
+from .models import Prestamo, Sucursal
+from .serializers import PrestamosSerializer, SucursalSerializer
+from rest_framework.permissions import AllowAny
 
 
 class PrestamoViewSet(viewsets.ModelViewSet):
@@ -9,3 +10,9 @@ class PrestamoViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         user_id = self.request.query_params.get("user_id")
         return Prestamo.objects.filter(cliente=user_id)
+
+
+class SucursalesViewSet(viewsets.ModelViewSet):
+    queryset = Sucursal.objects.all()
+    serializer_class = SucursalSerializer
+    permission_classes = [AllowAny]

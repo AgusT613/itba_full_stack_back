@@ -22,7 +22,7 @@ from tarjetas.views import TarjetasViewSet
 from cuentas.views import CuentaViewSet
 from pagos.views import PagosViewSet
 from facturas.views import FacturaViewSet
-from prestamos.views import PrestamoViewSet
+from prestamos.views import PrestamoViewSet, SucursalesViewSet
 
 router = routers.DefaultRouter()
 router.register("users", UserViewSet, basename="users")
@@ -31,6 +31,7 @@ router.register("cuentas", CuentaViewSet, basename="cuentas")
 router.register("pagos", PagosViewSet, basename="pago_servicios")
 router.register("facturas", FacturaViewSet, basename="facturas")
 router.register("prestamos", PrestamoViewSet, basename="prestamos")
+router.register("sucursales", SucursalesViewSet, basename="sucursales")
 
 urlpatterns = [
     path("admin/", admin.site.urls),
