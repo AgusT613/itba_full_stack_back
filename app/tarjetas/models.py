@@ -13,3 +13,6 @@ class Tarjeta(models.Model):
         choices=[("debito", "Tarjeta de debito"), ("credito", "Tarjeta de credito")],
         max_length=30,
     )
+
+    def __str__(self) -> str:
+        return f"{self.propietario}, {self.marca}, {self.tipo}"

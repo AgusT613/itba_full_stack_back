@@ -5,7 +5,7 @@ from .models import Prestamo, Sucursal
 class SucursalSerializer(serializers.ModelSerializer):
     class Meta:
         model = Sucursal
-        fields = ["nombre", "direccion"]
+        fields = ["id", "nombre", "direccion"]
 
 
 class PrestamosSerializer(serializers.ModelSerializer):
@@ -14,6 +14,7 @@ class PrestamosSerializer(serializers.ModelSerializer):
     class Meta:
         model = Prestamo
         fields = [
+            "id",
             "cliente",
             "sucursal",
             "tipo_prestamo",
@@ -28,3 +29,17 @@ class PrestamosSerializer(serializers.ModelSerializer):
         for track_data in sucursal_data:
             Sucursal.objects.create(prestamo=prestamo, **track_data)
         return prestamo
+
+
+class PrestamosSucursalIdSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Prestamo
+        fields = [
+            "id",
+            "cliente",
+            "sucursal",
+            "tipo_prestamo",
+            "fecha_inicio_prestamo",
+            "fecha_finalizacion_prestamo",
+            "monto",
+        ]
